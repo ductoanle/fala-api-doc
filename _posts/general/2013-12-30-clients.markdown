@@ -9,14 +9,11 @@ Each client is defined by id, name, code_name, secret
 
 *code_name* is used internally to fetch data from the right service
 
-*secret* is used to sign the request url, making sure the requests are coming from valid clients
-
 *Example*
 {% highlight json %}
 {
 	id: 1,
 	name: "Alcohol Delivery",
-	code_name: "dyonisus",
-	secret: "ASDJFdsfljsld349334-dsa3947"
+	code_name: "dyonisus"
 }
 {% endhighlight %}
