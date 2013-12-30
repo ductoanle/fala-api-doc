@@ -1,0 +1,13 @@
+---
+layout: single
+title: Overview
+categories: general
+resource: overview
+---
+
+Compulsory header parameters for every API request
+
+* application_id - Android, iOS, Web each is an application. There can be multiple applications for a single client
+* timestamp - Time that the request is made
+* key - Hash that generated from the request url, application_id, timestamp and secret
+

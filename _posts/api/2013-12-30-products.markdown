@@ -15,36 +15,77 @@ Return the list of all products in json format.
 
 *Accepted Parameters*
 
-* category_id - Return only all products from a specified category
+* collection_id - Return only all products from a specified collection
+* format 
+	+ "less" - Return less info in order to cut down the response size
+	+ "full" - Default value. Return all info under product
 
 *Sample response*
 
 {% highlight json %}
-	[
-		{
-			id: "259",
-			name: "Bacardi Breezer Lemon 275ml",
-			description: "",
-			images:
+[
+	{
+		id: "259p",
+		type: "product",
+		name: "Bacardi Breezer Lemon 275ml",
+		description: "The best beer in Europe. A must try for everyone",
+		images:
+			[
 				{
-					"thumb":"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Lemon-173x173.jpg",
-					"full":"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Lemon-173x173.jpg"
+					thumb:"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Lemon-173x173.jpg",
+					full:"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Lemon-173x173.jpg"
 				},
-			price: "5.95"
-		},
-		{
-			id: "260",
-			name: "Bacardi Breezer Orange 275ml",
-			description: "",
-			images: 
 				{
-					"thumb":"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Orange-173x173.jpg",
-					"full":"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Orange-173x173.jpg"
+					thumb:"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Lemon-173x173.jpg",
+					full:"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Lemon-173x173.jpg"
+				}
+			],
+		collection_id: "18c",
+		variants: 
+			{
+				chilled: [ "chilled", "no chilled"],
+				size: ["330ml", "500ml", "880ml"]
+			}
+		price:
+			{
+				base: "5.95",
+				promo: "4.95"
+			} 
+	},
+	{
+		id: "260p",
+		type: "product",
+		name: "Bacardi Breezer Orange 275ml",
+		description: "Best beer money can buy",
+		images: 
+			[
+				{
+					thumb:"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Orange-173x173.jpg",
+					full:"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Orange-173x173.jpg"
 				},
-			price: "5.95"
-		}
-	]
+				{
+					thumb:"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Lemon-173x173.jpg",
+					full:"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Lemon-173x173.jpg"
+				}
+			],
+		collection_id : "15c", 
+		variants:
+			{
+				chilled: [ "chilled", "no chilled"],
+				size: ["330ml", "500ml", "880ml"]
+			}
+		price:
+			{
+				base: "5.95",
+				promo: "4.95"
+			} 
+	}
+]
 {% endhighlight %}
+
+*Note*
+
+There can be more options for images and variants on project basis.
 
 ### Get a product
 	
@@ -52,24 +93,41 @@ Return the list of all products in json format.
 
 *Sample Request*
 	
-	/products/10.json
+	/products/100p.json
 
 *Description*
 
-Return informtation about the product specified by product_id
+Return information about the product specified by product_id
 
 *Sample Response*
 
 {% highlight json %}
-	{
-		id: "259",
-		name: "Bacardi Breezer Lemon 275ml",
-		description: "",
-		images:
+{
+	id: "259p",
+	type: "product",
+	name: "Bacardi Breezer Lemon 275ml",
+	description: "The best beer in Europe. A must try for everyone",
+	images:
+		[
 			{
-				"thumb":"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Lemon-173x173.jpg",
-				"full":"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Lemon-173x173.jpg"
+				thumb:"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Lemon-173x173.jpg",
+				full:"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Lemon-173x173.jpg"
 			},
-		price: "5.95"
-	}
+			{
+				thumb:"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Lemon-173x173.jpg",
+				full:"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Lemon-173x173.jpg"
+			}
+		],
+	collection_id: "18c",
+	variants: 
+		{
+			chilled: [ "chilled", "no chilled"],
+			size: ["330ml", "500ml", "880ml"]
+		}
+	price:
+		{
+			base: "5.95",
+			promo: "4.95"
+		} 
+}
 {% endhighlight %}
