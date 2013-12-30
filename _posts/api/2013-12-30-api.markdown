@@ -4,4 +4,4 @@ title: API
 categories: api
 ---
 
-This is the documentation for Radian API. This API is still a work in progress, which means periodic changes are expected.
+This is the documentation for Radiant API. This API is still a work in progress, which means periodic changes are expected.
