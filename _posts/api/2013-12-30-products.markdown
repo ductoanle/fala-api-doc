@@ -1,0 +1,75 @@
+---
+layout: single
+title: Products
+categories: api
+resource: products
+---
+
+### Get all products
+
+	GET /products.json
+
+*Description*	
+
+Return the list of all products in json format. 
+
+*Accepted Parameters*
+
+* category_id - Return only all products from a specified category
+
+*Sample response*
+
+{% highlight json %}
+	[
+		{
+			id: "259",
+			name: "Bacardi Breezer Lemon 275ml",
+			description: "",
+			images:
+				{
+					"thumb":"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Lemon-173x173.jpg",
+					"full":"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Lemon-173x173.jpg"
+				},
+			price: "5.95"
+		},
+		{
+			id: "260",
+			name: "Bacardi Breezer Orange 275ml",
+			description: "",
+			images: 
+				{
+					"thumb":"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Orange-173x173.jpg",
+					"full":"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Orange-173x173.jpg"
+				},
+			price: "5.95"
+		}
+	]
+{% endhighlight %}
+
+### Get a product
+	
+	GET /products/{product_id}.json
+
+*Sample Request*
+	
+	/products/10.json
+
+*Description*
+
+Return informtation about the product specified by product_id
+
+*Sample Response*
+
+{% highlight json %}
+	{
+		id: "259",
+		name: "Bacardi Breezer Lemon 275ml",
+		description: "",
+		images:
+			{
+				"thumb":"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Lemon-173x173.jpg",
+				"full":"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Lemon-173x173.jpg"
+			},
+		price: "5.95"
+	}
+{% endhighlight %}
