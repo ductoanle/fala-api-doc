@@ -1,3 +1,4 @@
 pygments: true
 permalink: /:categories/:title
 auto: true
+url: /fala-api-doc
