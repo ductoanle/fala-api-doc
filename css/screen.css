@@ -1,0 +1,71 @@
+/** Viki Developer site version 2
+ * Built with love by Eli James @ejames_c
+ **/
+html {
+  background-color: #FFF;
+}
+body {
+  padding-top: 60px;
+  height: 100%;
+}
+
+.index-hero {
+  margin-top: 120px;
+  background: #fff url('http://viki-org.github.com/img/braingear.png') no-repeat left top;
+}
+
+.alert {
+  background: #FA9;
+  padding: 10px;
+  font-size: 200%;
+  color: #FFF;
+}
+
+.footer {
+  padding: 50px 0;
+  margin-top: 70px;
+  border-top: 1px solid #eee;
+  background: #FFF;
+  color: #333;
+}
+.footer a { color: #333; }
+
+pre {
+  max-height: 700px;
+  max-width: 775px;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+#sidebar {
+  margin-top: 20px;
+  border: 3px solid #B2D6E0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#highlight li {
+  list-style: none;
+}
+#highlight li a {
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 8px;
+  background: #2196BA;
+  display: block;
+  width: 90%;
+}
+#highlight li a:hover {
+  text-decoration: none;
+  background: #D9A41F;
+}
+#highlight li a h2 {
+  font-size: 41px;
+  font-weight: 200;
+  line-height: 30px;
+}
+#highlight li p {
+  font-weight: 200;
+}
