@@ -1,0 +1,70 @@
+---
+layout: single
+title: Features
+categories: api
+resource: features
+---
+
+### Get products/collections from a featured list
+
+	GET /features.json
+
+*Description*	
+
+Return the content of a featured list, items can be either collection or product
+
+*Accepted Parameters*
+
+* list_id - Required. Id of the featured list
+
+*Sample Response*
+
+{% highlight json %}
+[
+	{
+		name: "New year hottest promotion",
+		description: "blah blah blah hot hot hot",
+		images:
+			[
+				{
+					thumb:"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Lemon-173x173.jpg",
+					full:"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Lemon-173x173.jpg"
+				},
+				{
+					thumb:"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Lemon-173x173.jpg",
+					full:"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Lemon-173x173.jpg"
+				}
+			],
+		resource:
+			{
+				id: "259p",
+				type: "product",
+				name: "Bacardi Breezer Lemon 275ml",
+				description: "The best beer in Europe. A must try for everyone"
+			}
+	},
+	{
+		name: "New year hottest promotion",
+		description: "blah blah blah hot hot hot",
+		images:
+			[
+				{
+					thumb:"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Lemon-173x173.jpg",
+					full:"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Lemon-173x173.jpg"
+				},
+				{
+					thumb:"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Lemon-173x173.jpg",
+					full:"http://www.weloveaiden.com/projects/alcoholdelivery/image/cache/data/Product Pictures/PreMix Ready to Drink/Bacardi-Breezer-Lemon-173x173.jpg"
+				}
+			],
+		resource:
+			{
+				iid: "15c",
+				type: "collection",
+				name: "Beer",
+				description: "Beer is an alcoholic beverage produced by the saccharification of starch and fermentation of the resulting sugar"
+			}
+	
+	}
+]
+{% endhighlight %}
