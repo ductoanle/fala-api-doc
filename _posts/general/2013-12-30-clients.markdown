@@ -8,12 +8,14 @@ resource: clients
 Each client is defined by id, name, code_name, secret 
 
 *code_name* is used internally to fetch data from the right service
+*secret* is used to sign request for specific client
 
 *Example*
 {% highlight json %}
 {
 	id: 1,
 	name: "Alcohol Delivery",
-	code_name: "dyonisus"
+	code_name: "dyonisus",
+  secret: "5a2b2654204161322a6a462f273e582a2a2367674a52293b2072562c54"
 }
 {% endhighlight %}

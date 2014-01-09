@@ -7,7 +7,8 @@ resource: products
 
 ### Get all products
 
-	GET /products.json
+	GET /products
+	GET /collections/:collection_id/products
 
 *Description*	
 
@@ -89,15 +90,15 @@ There can be more options for images and variants on project basis.
 
 ### Get a product
 	
-	GET /products/{product_id}.json
+	GET /products/:id
 
 *Sample Request*
 	
-	/products/100p.json
+	/products/100p
 
 *Description*
 
-Return information about the product specified by product_id
+Return information about the product specified by id
 
 *Sample Response*
 

@@ -5,9 +5,12 @@ categories: general
 resource: overview
 ---
 
-Compulsory header parameters for every API request
+Compulsory header & query parameters for every API request
 
-* application_id - Android, iOS, Web each is an application. There can be multiple applications for a single client
-* timestamp - Time that the request is made
-* key - Hash that generated from the request url, application_id, timestamp and secret (Each application will be given a secret)
+* client_id (param)- Each client is identified by an id number
+* timestamp (header) - Time that the request is made. Stale timestamp will be returned if the timestamp is off for more than 5 mintues
+* key (header) - Hash that generated from the request url, client_id, timestamp and secret (Each client will be given a secret). "Invalid key" error returned in case the key does not match with the request
+* no_cache (param | optional) - if value set to true, instead of returning cached result, the server will pull and return the latest data
+* page, per_page (param | optional) - options to paginate result for faster response
+* dev (param | optional) - if value set to true, will not check for timestamp and key (simpler to test out the API)
 

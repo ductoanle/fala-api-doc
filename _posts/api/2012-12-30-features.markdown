@@ -7,7 +7,7 @@ resource: features
 
 ### Get products/collections from a featured list
 
-	GET /features.json
+	GET /features
 
 *Description*	
 

@@ -7,7 +7,7 @@ resource: collections
 
 ### Get all collections
 
-	GET /collections.json
+	GET /collections
 
 *Description*	
 
@@ -97,15 +97,15 @@ Resouces can contain both products and other collection. Make it flexible for mu
 
 ### Get a collection
 	
-	GET /collections/{collection_id}.json
+	GET /collections/:id
 
 *Sample Request*
 	
-	/collections/10c.json
+	/collections/10c
 
 *Description*
 
-Return information about the product specified by collection_id
+Return information about the product specified by id
 
 *Sample Response*
 
